@@ -1,0 +1,32 @@
+:local(.container) {
+	transition: margin 1s ease-in-out ; 
+	border-right : 5px solid #DDD;
+	display : flex ; 
+	height:100% ;
+	flex-direction  : row ;
+	flex-wrap: wrap ; 
+	margin : 0 ;
+	list-style: none;
+	align-content: stretch;
+	justify-content: flex-start;
+}
+
+
+:local(.container) {
+	width : 20%;
+}
+
+:local(.close) {
+	margin-left : -20% ;
+}
+
+@media (max-width : 700px) {
+		:local(.container) {
+			width : 75%;
+		}
+		:local(.close) {
+			margin-left : -75% ; 
+		}
+}
+
+

@@ -1,0 +1,26 @@
+:local(.cloud) {
+	height : 25%;
+	width  :100%;
+	margin : 0 ;
+	list-style : none; 
+	padding : 0px ; 
+	padding-top : 20px ; 
+	display : flex ;
+	flex-wrap : wrap ; 
+	align-content : flex-start ;
+	flex-direction : row; 
+}
+
+
+:local(.item){
+	align-self : flex-start ;
+	margin : 5px ;
+	border-radius : 12px ; 
+	background-color : red ; 
+}
+
+
+:local(.item_content) {
+	padding : 5px ;
+	min-width : auto; 
+}
