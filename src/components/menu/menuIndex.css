@@ -9,15 +9,21 @@
 	list-style: none;
 	align-content: stretch;
 	justify-content: flex-start;
-}
-
-
-:local(.container) {
+	margin-left : 0% ;
 	width : 20%;
 }
 
 :local(.close) {
-	margin-left : -20% ;
+	margin-left : -10% ;
+}
+
+@media (max-width : 1200px) {
+		:local(.container) {
+			width : 25%;
+		}
+		:local(.close) {
+			margin-left : -25% ; 
+		}
 }
 
 @media (max-width : 700px) {

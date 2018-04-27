@@ -5,6 +5,18 @@ import {Provider} from 'react-redux'
 import './App.css';
 
 
+let primaryStyleContainer = {
+	color : '#D7DDFF',
+	fontFamily : 'Raleway, sans-serif',
+	backgroundColor : '#003980'
+}
+
+let secondaryStyleContainer = {
+	color : '#D7DDFF',
+	fontFamily : 'Raleway, sans-serif',
+	backgroundColor : 'grey'
+}
+
 
 
 class App extends Component {
@@ -13,7 +25,9 @@ class App extends Component {
 		  <Provider store={store}>
 
 
-		<div className="App">
+			  <div
+				  style={primaryStyleContainer}
+				  className="App">
 			<Menu/>
 		</div>
 

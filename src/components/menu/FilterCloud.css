@@ -1,22 +1,37 @@
-:local(.cloud) {
-	height : 25%;
+:local(.container) {
+	position: relative ;
 	width  :100%;
-	margin : 0 ;
-	list-style : none; 
-	padding : 0px ; 
 	padding-top : 20px ; 
-	display : flex ;
-	flex-wrap : wrap ; 
-	align-content : flex-start ;
-	flex-direction : row; 
+	overflow: hidden;
 }
 
+:local(.close) {
+	max-height : 15%;
+}
+
+:local(.open) {
+	max-height : 15%;
+}
+
+
+:local(.cloud) {
+	padding : 0px ; 
+	height : 100%;
+	width  :100%;
+	margin : 0 ;
+	margin-top : 15px ;
+	list-style : none; 
+	display : flex ;
+	flex-wrap : wrap ; 
+	justify-content : center ;
+	align-content : center ;
+	flex-direction : row; 
+}
 
 :local(.item){
 	align-self : flex-start ;
 	margin : 5px ;
 	border-radius : 12px ; 
-	background-color : red ; 
 }
 
 
@@ -24,3 +39,19 @@
 	padding : 5px ;
 	min-width : auto; 
 }
+
+:local(.separator) {
+	width : 100%;
+	position: absolute ;
+	z-index: 9; 
+  bottom: 0 ; 
+	border : solid  3px;
+}
+
+
+
+
+
+
+
+

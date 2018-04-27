@@ -1,0 +1,4 @@
+const gradiantBg = "background: rgba(73,155,234,1)  background: -moz-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(103,128,153,1) 41%, rgba(19,83,150,1) 82%, rgba(19,83,150,1) 100%)  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(73,155,234,1)), color-stop(41%, rgba(103,128,153,1)), color-stop(82%, rgba(19,83,150,1)), color-stop(100%, rgba(19,83,150,1)))  background : -webkit-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(103,128,153,1) 41%, rgba(19,83,150,1) 82%, rgba(19,83,150,1) 100%)  background: -o-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(103,128,153,1) 41%, rgba(19,83,150,1) 82%, rgba(19,83,150,1) 100%)  background: -ms-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(103,128,153,1) 41%, rgba(19,83,150,1) 82%, rgba(19,83,150,1) 100%) "
+
+
+export default gradiantBg
