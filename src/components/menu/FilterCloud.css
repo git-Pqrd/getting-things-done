@@ -10,7 +10,7 @@
 }
 
 :local(.open) {
-	max-height : 15%;
+	height : auto;
 }
 
 

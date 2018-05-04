@@ -1,6 +1,8 @@
 import React, { Component} from 'react';
-import { connect } from 'react-redux';
 import styles from './ModalToggler.css';
+import {connect } from 'react-redux'
+import { toggleAddModal,  toggleSearchModal } from './../../redux/action';
+
 
 let primaryStyleComponent = {
 	backgroundColor : '#2790CA',
@@ -10,9 +12,7 @@ let primaryStyleComponent = {
 }
 
 class ModalToggler extends Component {
-	tester () {
-		console.log('value');
-	}
+	
 	render() {
 		return (
 			<div className={styles.container}>
@@ -20,16 +20,16 @@ class ModalToggler extends Component {
 				<div className={styles.icon_modal}	>
 					<a 
 						style={primaryStyleComponent}
-						onClick={this.tester}>
-						{}	Add
+						onClick={toggleAddModal}>
+						{ this.props.language === 'fr' ? 'Ajouter' : 'Add'  }	
 					</a>
 				</div>	
 				
 				<div className={styles.icon_modal}>
 					<a 
 						style={primaryStyleComponent}
-						onClick={this.tester}>
-						{} Search	
+						onClick={toggleSearchModal}>
+						{ this.props.language === 'fr' ? 'Chercher' : 'Search'  }	
 					</a>
 				</div>	
 				
@@ -38,8 +38,12 @@ class ModalToggler extends Component {
 	}
 }
 
-function mapStateToProps(state) {
-	return {};
+const mapStateToProps = state => { 
+	return 	{
+		language : state.LOGIC.language
+	}
 }
+
+
 
 export default connect(mapStateToProps)(ModalToggler);

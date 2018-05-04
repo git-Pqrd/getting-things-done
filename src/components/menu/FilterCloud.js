@@ -37,11 +37,9 @@ class FilterCloud extends Component {
 
 
 	toggleContainer () {
-		console.log(this.state);
 		this.setState({
 			filterOpen : !this.state.filterOpen
 		})
-		console.log(this.state);
 	
 	}
 	killTheDragGhost(e) {
@@ -74,13 +72,16 @@ class FilterCloud extends Component {
 		this.endM = this.getClientY(e)
 		this.delta = (this.initM - this.endM)
 		if ((this.delta**2)**0.5 < 20 ) {
+			console.log('the delta is too low');
 			return  ; // return if delta too small
 		} else if ((this.delta) > 0 ) {
-			if (this.filterOpen) {
+			if (this.state.filterOpen) {
+				console.log('delta enough and up');
 				this.toggleContainer()
 			} // close if open	
 		}else {
-			if (!this.filterOpen) {
+			if (!this.state.filterOpen) {
+				console.log('delta enough and down');
 				this.toggleContainer()
 			} //  open if close
 		}
@@ -92,14 +93,14 @@ class FilterCloud extends Component {
 
 	render() {
 		return (
-			<div style={primaryStyleContainer} className={
+			<div 
+				style={primaryStyleContainer} className={
 				[styles.container,  
 				this.state.filterOpen ? styles.open : styles.close 
 				].join(' ')}>
 
 				<ul 
 					draggable
-					
 					onDragStart={(e) => this.killTheDragGhost(e)}
 					onTouchStart={(e) => this.containerMStart(e)}
 

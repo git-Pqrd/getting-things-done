@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import Menu from './components/menu'
 import store from './redux/store.js'
 import {Provider} from 'react-redux'
 import './App.css';
+
+import Menu from './components/menu'
+import List from './components/list'
+import ModalSearch from './components/searchModal'
+import AddModal from './components/addModal'
+
 
 
 let primaryStyleContainer = {
@@ -28,7 +33,11 @@ class App extends Component {
 			  <div
 				  style={primaryStyleContainer}
 				  className="App">
-			<Menu/>
+				  <Menu/>
+				  <List/>
+				  
+				  <ModalSearch/>
+				  <AddModal/>
 		</div>
 
 

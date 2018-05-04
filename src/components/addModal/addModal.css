@@ -1,0 +1,36 @@
+:local(.container) {
+	z-index : 10 ;
+	height : 100% ;
+	width :100%;
+	position  :absolute ; 
+	top : 0 ; 
+	left : 0;
+	right : 0;
+	bottom : 0;
+}
+
+:local(.container_blurry) {
+	background-color : grey ; 
+	opacity:  0.5 ; 
+	height : 100% ;
+	width :100%;
+	position  :absolute ; 
+}
+
+
+:local(.inputBox) {
+	height : 25px ;
+	width : 250px ; 
+	border-radius : 20px; 
+}
+
+:local(.close) {
+	display : none ; 	
+}
+
+@media(max-width : 700px) {
+	:local(.component){
+		width : 80%; 
+	}
+}
+

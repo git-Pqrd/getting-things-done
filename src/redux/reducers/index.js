@@ -1,23 +1,12 @@
-
-
-export const groupedReducers = (state=[] , action) => {
-	switch (action.type) {
-		case 'TOGGLE_MENU' :
-			let newMenuOpen = !state.menuOpen;
-			let newState = Object.assign(
-				{} , 
-				state ,
-				state.menuOpen = newMenuOpen
-			)
-			return newState
-			
-		default : 
-			return state
-
-	
-	} 
-}
+import { combineReducers } from 'redux'
+import { LOGIC} from './LogicReducers.js'
+import { UI} from './UIReducers.js'
+import { DATA} from './DataReducers.js'
 
 
 
-
+export default combineReducers ({
+	UI ,
+	DATA ,
+	LOGIC 
+}) 

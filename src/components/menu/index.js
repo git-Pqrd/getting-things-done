@@ -84,7 +84,7 @@ class menuIndex extends Component {
 
 function mapStateToProps(state) {
 	return {
-		menuOpen : state.menuOpen 
+		menuOpen : state.UI.menuOpen 
 	};
 }
 
